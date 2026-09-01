@@ -1,0 +1,196 @@
+table data
+	lineageTag: 88b9aae3-0683-49ff-a7b0-1a5aaf26460e
+
+	column Income
+		dataType: int64
+		formatString: 0
+		lineageTag: de59bccf-daec-46ee-b41d-16baa39101e3
+		summarizeBy: sum
+		sourceColumn: Income
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		formatString: 0
+		lineageTag: 26a657b7-1c7a-46eb-8b23-0f7f1e61fe44
+		summarizeBy: sum
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dependents
+		dataType: int64
+		formatString: 0
+		lineageTag: dc60dee0-969b-49d1-bab8-9290c8ff6343
+		summarizeBy: sum
+		sourceColumn: Dependents
+
+		annotation SummarizationSetBy = Automatic
+
+	column Occupation
+		dataType: string
+		lineageTag: c6ea8032-2f6d-413f-8833-fe9bc72a3ef8
+		summarizeBy: none
+		sourceColumn: Occupation
+
+		annotation SummarizationSetBy = Automatic
+
+	column City_Tier
+		dataType: string
+		lineageTag: ad6ef8ea-6080-4061-bc74-a4eb9ad30adf
+		summarizeBy: none
+		sourceColumn: City_Tier
+
+		annotation SummarizationSetBy = Automatic
+
+	column Desired_Savings_Percentage
+		dataType: int64
+		formatString: 0
+		lineageTag: ca9aec10-112b-4d0d-9ee4-02cc04ed554d
+		summarizeBy: sum
+		sourceColumn: Desired_Savings_Percentage
+
+		annotation SummarizationSetBy = Automatic
+
+	column Desired_Savings
+		dataType: int64
+		formatString: 0
+		lineageTag: bf675565-90cd-4207-a3c0-7dffa9d91d12
+		summarizeBy: sum
+		sourceColumn: Desired_Savings
+
+		annotation SummarizationSetBy = Automatic
+
+	column Disposable_Income
+		dataType: int64
+		formatString: 0
+		lineageTag: 7988724e-514d-444e-a326-16b7d4453451
+		summarizeBy: sum
+		sourceColumn: Disposable_Income
+
+		annotation SummarizationSetBy = Automatic
+
+	column Potential_Savings_Groceries
+		dataType: int64
+		formatString: 0
+		lineageTag: 14aa37d6-b778-4c00-8765-6b55cbc6069e
+		summarizeBy: sum
+		sourceColumn: Potential_Savings_Groceries
+
+		annotation SummarizationSetBy = Automatic
+
+	column Potential_Savings_Transport
+		dataType: int64
+		formatString: 0
+		lineageTag: 235f9958-b2b9-4642-a147-026517e2122c
+		summarizeBy: sum
+		sourceColumn: Potential_Savings_Transport
+
+		annotation SummarizationSetBy = Automatic
+
+	column Potential_Savings_Eating_Out
+		dataType: int64
+		formatString: 0
+		lineageTag: 40d6eca6-8292-4fd1-8ecb-9943754ede7e
+		summarizeBy: sum
+		sourceColumn: Potential_Savings_Eating_Out
+
+		annotation SummarizationSetBy = Automatic
+
+	column Potential_Savings_Entertainment
+		dataType: int64
+		formatString: 0
+		lineageTag: e236c23f-3d14-4b1c-a384-345c2a5dd8ad
+		summarizeBy: sum
+		sourceColumn: Potential_Savings_Entertainment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Potential_Savings_Utilities
+		dataType: int64
+		formatString: 0
+		lineageTag: d878bd2e-7cdf-4a65-a6ef-02f93a7da333
+		summarizeBy: sum
+		sourceColumn: Potential_Savings_Utilities
+
+		annotation SummarizationSetBy = Automatic
+
+	column Potential_Savings_Healthcare
+		dataType: int64
+		formatString: 0
+		lineageTag: 8077097e-051d-4425-9fad-04ce3742b877
+		summarizeBy: sum
+		sourceColumn: Potential_Savings_Healthcare
+
+		annotation SummarizationSetBy = Automatic
+
+	column Potential_Savings_Education
+		dataType: int64
+		formatString: 0
+		lineageTag: 563d4500-a8ce-4149-b275-996d834f4cd6
+		summarizeBy: sum
+		sourceColumn: Potential_Savings_Education
+
+		annotation SummarizationSetBy = Automatic
+
+	column Potential_Savings_Miscellaneous
+		dataType: int64
+		formatString: 0
+		lineageTag: e7b14a02-56c9-44f4-8f57-58e6fbee5683
+		summarizeBy: sum
+		sourceColumn: Potential_Savings_Miscellaneous
+
+		annotation SummarizationSetBy = Automatic
+
+	column AgeRange
+		dataType: string
+		lineageTag: c6256b7a-263f-4133-a32c-6b6d5046feea
+		summarizeBy: none
+		sourceColumn: AgeRange
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Expense Category'
+		dataType: string
+		lineageTag: 01566399-1325-40f1-b9e0-2f475c41cc9b
+		summarizeBy: none
+		sourceColumn: Expense Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Expense amount'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1840a310-0e48-4d72-ba01-9f18278df5c4
+		summarizeBy: sum
+		sourceColumn: Expense amount
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Income Bracket'
+		dataType: string
+		lineageTag: e417b19b-6027-4f9e-bb30-5413a7d7b328
+		summarizeBy: none
+		sourceColumn: Income Bracket
+
+		annotation SummarizationSetBy = Automatic
+
+	partition data = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\MY PC\Pictures\archive(1)\data.csv"),[Delimiter=",", Columns=27, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Income", Int64.Type}, {"Age", Int64.Type}, {"Dependents", Int64.Type}, {"Occupation", type text}, {"City_Tier", type text}, {"Rent", Int64.Type}, {"Loan_Repayment", Int64.Type}, {"Insurance", Int64.Type}, {"Groceries", Int64.Type}, {"Transport", Int64.Type}, {"Eating_Out", Int64.Type}, {"Entertainment", Int64.Type}, {"Utilities", Int64.Type}, {"Healthcare", Int64.Type}, {"Education", Int64.Type}, {"Miscellaneous", Int64.Type}, {"Desired_Savings_Percentage", Int64.Type}, {"Desired_Savings", Int64.Type}, {"Disposable_Income", Int64.Type}, {"Potential_Savings_Groceries", Int64.Type}, {"Potential_Savings_Transport", Int64.Type}, {"Potential_Savings_Eating_Out", Int64.Type}, {"Potential_Savings_Entertainment", Int64.Type}, {"Potential_Savings_Utilities", Int64.Type}, {"Potential_Savings_Healthcare", Int64.Type}, {"Potential_Savings_Education", Int64.Type}, {"Potential_Savings_Miscellaneous", Int64.Type}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type", "AgeRange", each if [Age] <= 20 then "10-20" else if [Age] <= 35 then "21-35" else if [Age] <= 50 then "36-50" else if [Age] <= 60 then "51-60" else "Greater than 60"),
+				    #"Unpivoted Columns" = Table.UnpivotOtherColumns(#"Added Conditional Column", {"Income", "Age", "Dependents", "Occupation", "City_Tier", "Desired_Savings_Percentage", "Desired_Savings", "Disposable_Income", "Potential_Savings_Groceries", "Potential_Savings_Transport", "Potential_Savings_Eating_Out", "Potential_Savings_Entertainment", "Potential_Savings_Utilities", "Potential_Savings_Healthcare", "Potential_Savings_Education", "Potential_Savings_Miscellaneous", "AgeRange"}, "Attribute", "Value"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Unpivoted Columns",{{"Attribute", "Expense Category"}, {"Value", "Expense amount"}}),
+				    #"Added Conditional Column1" = Table.AddColumn(#"Renamed Columns", "Income Bracket", each if [Income] <= 20000 then "Low" else if [Income] <= 50000 then "Medium" else "High")
+				in
+				    #"Added Conditional Column1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

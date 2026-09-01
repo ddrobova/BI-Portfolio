@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Personal_finance project.pbix"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "92e7e796-298a-453d-8a6a-000910268368"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Personal_finance project.pbix"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e0e45234-05aa-443a-87b3-8904100731ed"
+  }
+}
