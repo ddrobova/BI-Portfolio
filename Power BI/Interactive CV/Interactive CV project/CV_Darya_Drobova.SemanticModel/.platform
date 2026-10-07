@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "CV_Darya_Drobova"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f9d0f459-a8c0-4b21-8589-4746e85d5b5c"
+  }
+}

@@ -1,0 +1,42 @@
+table Links
+	lineageTag: 8c585c64-e248-45a6-918b-6436ab096378
+
+	column Name
+		dataType: string
+		lineageTag: 29c2bc1c-9f56-49df-a653-8daffa8d872e
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Link
+		dataType: string
+		lineageTag: 34977d80-d641-4ce2-8bc6-a9e29fac318f
+		summarizeBy: none
+		sourceColumn: Link
+
+		annotation SummarizationSetBy = Automatic
+
+	column Image
+		dataType: string
+		lineageTag: 57302ecd-e548-43d0-89f5-b4909bde9067
+		summarizeBy: none
+		sourceColumn: Image
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Links-f239c0db-74c9-47f3-82e7-57e26fdd413a = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\! Dasha\LinkedIn проекты\Interactive Resume\CVexcel.xlsx"), null, true),
+				    Links_Sheet = Source{[Item="Links",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(Links_Sheet,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"Name", type text}, {"Link", type text}, {"Image", type text}}),
+				    #"Removed Blank Rows" = Table.SelectRows(#"Changed Type1", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null})))
+				in
+				    #"Removed Blank Rows"
+
+	annotation PBI_ResultType = Table
+

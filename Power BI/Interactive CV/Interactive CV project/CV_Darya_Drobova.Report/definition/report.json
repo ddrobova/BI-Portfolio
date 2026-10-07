@@ -1,0 +1,158 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY23SU04",
+      "reportVersionAtImport": {
+        "visual": "1.8.79",
+        "report": "2.0.79",
+        "page": "1.3.79"
+      },
+      "type": "SharedResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "aPGantt2DC486E54199414B99CB7E9D403FD90C",
+    "powerGANTTchart76BDD9F52FA14ADEB68823A07759D182",
+    "WordCloud1447959067750",
+    "Gantt1448688115699",
+    "timelineD7EACB3A04E64A5FA9D86F6E035F3523",
+    "timelineVariation1D7EACB3A04E64A5FA9D86F6E035F3529",
+    "timelineByQueryon2DD9A171C1CB4B148AA3DD23CEF5B2F9"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY23SU04",
+          "path": "BaseThemes/CY23SU04.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "16074969608142227.jpg",
+          "path": "16074969608142227.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "28016180502130545.jpg",
+          "path": "28016180502130545.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "37207211115463896.jpg",
+          "path": "37207211115463896.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "46388141899097397.jpg",
+          "path": "46388141899097397.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "56345903131262876.jpg",
+          "path": "56345903131262876.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "ES_honor8727998263725896.jfif",
+          "path": "ES_honor8727998263725896.jfif",
+          "type": "Image"
+        },
+        {
+          "name": "iba13944761140626809.jpg",
+          "path": "iba13944761140626809.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "iba29610556874749596.jpg",
+          "path": "iba29610556874749596.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "linkedin5536934990757201.png",
+          "path": "linkedin5536934990757201.png",
+          "type": "Image"
+        },
+        {
+          "name": "mail9296072047538508.png",
+          "path": "mail9296072047538508.png",
+          "type": "Image"
+        },
+        {
+          "name": "me11985356374455636.jpg",
+          "path": "me11985356374455636.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "phone5296986864628441.png",
+          "path": "phone5296986864628441.png",
+          "type": "Image"
+        },
+        {
+          "name": "skype9662727314939779.png",
+          "path": "skype9662727314939779.png",
+          "type": "Image"
+        },
+        {
+          "name": "Sognos_cert7986661986354238.jpg",
+          "path": "Sognos_cert7986661986354238.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "tableau_cert5759595943304321.png",
+          "path": "tableau_cert5759595943304321.png",
+          "type": "Image"
+        },
+        {
+          "name": "tableau9583640575842951.png",
+          "path": "tableau9583640575842951.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": false,
+    "useDefaultAggregateDisplayName": true
+  }
+}

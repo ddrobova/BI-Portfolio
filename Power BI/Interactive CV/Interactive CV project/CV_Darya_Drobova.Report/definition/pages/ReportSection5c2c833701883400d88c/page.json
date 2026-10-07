@@ -1,0 +1,10 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "ReportSection5c2c833701883400d88c",
+  "displayName": "Comp link",
+  "displayOption": "ActualSize",
+  "height": 75,
+  "width": 190,
+  "visibility": "HiddenInViewMode",
+  "type": "Tooltip"
+}
