@@ -1,0 +1,32 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Certification","Education","Experience","Experience (2)","Languages","Links","Soft skills","Technology","Articles","Companies"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Certification
+ref table DateTableTemplate_810e6d6b-3026-449b-b8a8-1f544bda0b9a
+ref table Education
+ref table Experience
+ref table LocalDateTable_ade2d987-6a7a-434d-845d-19681ca6eebe
+ref table Languages
+ref table Links
+ref table 'Soft skills'
+ref table Technology
+ref table Articles
+ref table Companies
+ref table 'Experience (2)'
+ref table Date
+ref table LocalDateTable_756f9a22-35ae-4593-bec0-ee3656186c72
+ref table LocalDateTable_4ecd85e8-749d-4a28-a0c2-e1c5c46fd6fa
+
+ref cultureInfo en-US
+

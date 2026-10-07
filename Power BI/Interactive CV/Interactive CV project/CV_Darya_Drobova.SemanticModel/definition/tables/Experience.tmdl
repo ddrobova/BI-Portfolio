@@ -1,0 +1,131 @@
+table Experience
+	lineageTag: 5f2b913b-bf3c-4ef1-b690-b2d42529af4d
+
+	column Num
+		dataType: string
+		lineageTag: c8f3407e-72a8-4b7f-b043-8a4c39088c42
+		summarizeBy: none
+		sourceColumn: Num
+
+		annotation SummarizationSetBy = Automatic
+
+	column Company
+		dataType: string
+		lineageTag: 527fdb2f-4e8c-44a9-8c09-4a4b66e6d63a
+		summarizeBy: none
+		sourceColumn: Company
+
+		annotation SummarizationSetBy = Automatic
+
+	column Position
+		dataType: string
+		lineageTag: 6b8d34b2-5e68-4ddc-ab9f-099dd64ac0aa
+		summarizeBy: none
+		sourceColumn: Position
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Name'
+		dataType: string
+		lineageTag: ae8d95e3-9feb-46de-9537-84f07cedf010
+		summarizeBy: none
+		sourceColumn: Project Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Project Description'
+		dataType: string
+		lineageTag: 5ea18e4e-dc35-47bc-a8aa-eafacd3fc33e
+		summarizeBy: none
+		sourceColumn: Project Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Start
+		dataType: dateTime
+		formatString: mmm yyyy
+		lineageTag: ca17ff9b-9192-4550-b195-35bf16e408a4
+		summarizeBy: none
+		sourceColumn: Start
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column Finish
+		dataType: dateTime
+		formatString: mmm yyyy
+		lineageTag: 636be0d4-f2dd-47a9-8516-3fe61aaa4eb3
+		summarizeBy: none
+		sourceColumn: Finish
+
+		variation Variation
+			isDefault
+			relationship: 69853cb1-ad2b-4223-8cdd-d9cccd176b9c
+			defaultHierarchy: LocalDateTable_ade2d987-6a7a-434d-845d-19681ca6eebe.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	column Responsibilities
+		dataType: string
+		lineageTag: 7f31447a-f7a3-4fc8-8f06-b95bca9fbdf7
+		summarizeBy: none
+		sourceColumn: Responsibilities
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Technologies and Tools'
+		dataType: string
+		lineageTag: 54c9cf34-14c8-4978-a453-0c36b1d11195
+		summarizeBy: none
+		sourceColumn: Technologies and Tools
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Main Tool'
+		dataType: string
+		lineageTag: aa2c32d1-84b4-4952-be6b-ea5c973b7ee7
+		summarizeBy: none
+		sourceColumn: Main Tool
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Company Hierarchy'
+		lineageTag: 972d9872-e703-48e5-8932-952e3f784277
+
+		level Company
+			lineageTag: 4cd10f4f-a23d-4b8d-b7c3-49991580d38c
+			column: Company
+
+		level 'Project Name'
+			lineageTag: fd81fcab-df9b-4b4c-a037-91324623ca24
+			column: 'Project Name'
+
+		level Position
+			lineageTag: 44c38ac1-82df-41eb-982c-9acddad8cb7b
+			column: Position
+
+		level Responsibilities
+			lineageTag: 51773e2a-1eb9-4d45-a162-bdef648eb2f5
+			column: Responsibilities
+
+	partition Experience-947a0099-1541-43c7-bb45-7634a5a4f710 = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("D:\! Dasha\LinkedIn проекты\Interactive Resume\CVexcel.xlsx"), null, true),
+				    Experience_Sheet = Source{[Item="Experience",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Experience_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Num", type any}, {"Company", type text}, {"Position", type text}, {"Project Name", type text}, {"Project Description", type text}, {"Start", type date}, {"Finish", type date}, {"Responsibilities", type text}, {"Technologies and Tools", type text}}),
+				    #"Removed Blank Rows" = Table.SelectRows(#"Changed Type", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null})))
+				in
+				    #"Removed Blank Rows"
+
+	annotation PBI_ResultType = Table
+

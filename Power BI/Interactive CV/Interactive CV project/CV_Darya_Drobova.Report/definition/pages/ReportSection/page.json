@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "ReportSection",
+  "displayName": "Darya Drobova",
+  "displayOption": "ActualSize",
+  "height": 890,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "e4adc39012bbbd7c6ac7",
+      "target": "e00f0dcc110612ecc003",
+      "type": "DataFilter"
+    },
+    {
+      "source": "e4adc39012bbbd7c6ac7",
+      "target": "0d915f713d953950a19c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "e4adc39012bbbd7c6ac7",
+      "target": "e19a1ef639c0b34a3d76",
+      "type": "NoFilter"
+    },
+    {
+      "source": "31b417d7064d94e43c61",
+      "target": "e00f0dcc110612ecc003",
+      "type": "NoFilter"
+    },
+    {
+      "source": "31b417d7064d94e43c61",
+      "target": "0d915f713d953950a19c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "31b417d7064d94e43c61",
+      "target": "e19a1ef639c0b34a3d76",
+      "type": "NoFilter"
+    },
+    {
+      "source": "52b3ec059dee10b8bed4",
+      "target": "eab51d5101117a907129",
+      "type": "NoFilter"
+    },
+    {
+      "source": "52b3ec059dee10b8bed4",
+      "target": "e00f0dcc110612ecc003",
+      "type": "NoFilter"
+    },
+    {
+      "source": "52b3ec059dee10b8bed4",
+      "target": "da9dd7792a0a370a66c0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "52b3ec059dee10b8bed4",
+      "target": "0711cc7021301089d97a",
+      "type": "NoFilter"
+    }
+  ]
+}
