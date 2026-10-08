@@ -1,7 +1,3 @@
-\# Dashboard: PharmaDash (AW BI × AstraZeneca)
-
-
-
 \## About the project
 
 The dashboard was created as part of the \*\*PharmaDash\*\* contest-hackathon by \*\*AW BI\*\* and \*\*AstraZeneca\*\*, held from \*\*November 24 to December 16, 2025\*\*.
