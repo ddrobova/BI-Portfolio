@@ -15,7 +15,7 @@ The portfolio is organized into folders, each containing examples of dashboards 
 - **Power BI** (*Interactive CV and Dashboard Redesign projects*)
 - **Open-source BI tools**
 
-Each folder includes dashboards and projects created in the corresponding tool, `.md` files contain additional context and public links to the reports.
+Each folder includes dashboards and projects created in the corresponding tool, `README.md` file contain additional context and public link to the dashboards.
 
 ## Beyond dashboards
 
