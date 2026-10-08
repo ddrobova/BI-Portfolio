@@ -12,7 +12,7 @@ The portfolio is organized into folders, each containing examples of dashboards 
 
 - **Contests & Hackathons in Data Visualization**
 - **Tableau**
-- **Power BI** (*Interactive CV project and Dashboard Redesign project*)
+- **Power BI** (*Interactive CV and Dashboard Redesign projects*)
 - **Open-source BI tools**
 
 Each folder includes dashboards and projects created in the corresponding tool, `.md` files contain additional context and public links to the reports.
