@@ -1,14 +1,14 @@
-Статьи, которые я писала для корпоративных сайтов компаний, в которых работала.
+Articles I wrote for the corporate websites of the companies where I worked:
 
 
 
-1. **IBA Group Tableau Special Courses** 
+1. **IBA Group Tableau Special Courses**
 
 &#x20;  https://ibagroupit.com/insights/iba-group-tableau-special-courses/
 
 
 
-**2. Better Business Intelligence: Bringing Data-Driven Insights to Everyone with IBM Cognos Analytics 11** 
+**2. Better Business Intelligence: Bringing Data-Driven Insights to Everyone with IBM Cognos Analytics 11**
 
 &#x20;  https://ibagroupit.com/insights/data-driven-insights-with-ibm-cognos-analytics-11/
 
@@ -26,13 +26,13 @@
 
 
 
-**5. How to choose the Best BI tool for Your Business** *(эта статья принесла крупного заказчика компании)*
+**5. How to choose the Best BI tool for Your Business** *(this article brought the company a major client)*
 
 &#x20;  https:\\www.effectivesoft.com\\blog\\best-business-intelligence-tools-comparison.html
 
 
 
-**6. How to create an Interactive Resume**  
+**6. How to create an Interactive Resume**
 
 &#x20;  https://www.linkedin.com/pulse/how-create-interactive-resume-effectivesoft?utm\_source=share\&utm\_medium=member\_ios\&utm\_campaign=share\_via
 

@@ -2,7 +2,7 @@
 
 Welcome! 👋
 
-My name is **Darya Drobova**. I've been working in data visualization as a BI developer / BI analyst for over **12 years**, building dashboards and I genuinely love what I do.
+My name is **Darya Drobova**. I've been working as a BI developer / BI analyst for over **12 years** and I genuinely love what I do.
 
 This repository is my personal BI portfolio, focused on data visualization and dashboard design.
 
@@ -12,16 +12,14 @@ The portfolio is organized into folders, each containing examples of dashboards 
 
 - **Contests & Hackathons in Data Visualization**
 - **Tableau**
-- **Power BI** (*Interactive CV project*)
-- **Power BI Redesign**
-- **Apache Superset**
-- **Metabase**
+- **Power BI** (*Interactive CV project and Dashboard Redesign project*)
+- **Open-source BI tools**
 
-Each folder includes dashboards and projects created in the corresponding tool. Where available, `.md` files contain additional context and public links to the reports.
+Each folder includes dashboards and projects created in the corresponding tool, `.md` files contain additional context and public links to the reports.
 
 ## Beyond dashboards
 
-You can also find links to my **articles** and **recordings of meetup streams** I've hosted — in both Russian and English:
+You can also find links to my **articles** and **recordings of meetup streams** I've hosted (Russian and English):
 
 - [Article links](Article%20links.md)
 - [Meetups links](Meetups%20links.md)
