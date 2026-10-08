@@ -3,8 +3,6 @@ The dashboard was created as part of the **PharmaDash** contest-hackathon by **A
 
 ## Contest overview
 Participants were given a **real analytical task** from the pharmaceutical company **AstraZeneca**. The goal was to work in a team to build a **clear, interactive business dashboard** in the **AW BI** system that solves a specific business problem.
-
-## Who it was for
 The contest was aimed at **BI analysts** ready to work with **live data** and **real business cases** in a team format.
 
 ## Value
