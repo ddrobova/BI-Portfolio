@@ -1,42 +1,42 @@
-\# Дашборд: ФармаДаш (AW BI × AstraZeneca)
+\# Dashboard: PharmaDash (AW BI × AstraZeneca)
 
 
 
-\## О проекте
+\## About the project
 
-Дашборд разработан в рамках конкурса-хакатона \*\*«ФармаДаш»\*\* от \*\*AW BI\*\* и \*\*AstraZeneca\*\*, который проходил с \*\*24 ноября по 16 декабря 2025 года\*\*.
-
-
-
-\## Суть конкурса
-
-Участникам давали \*\*реальную аналитическую задачу\*\* от фармацевтической компании \*\*AstraZeneca\*\*. Задача — в команде собрать \*\*понятный интерактивный бизнес-дашборд\*\* в системе \*\*AW BI\*\*, который решает конкретную бизнес-проблему.
+The dashboard was created as part of the \*\*PharmaDash\*\* contest-hackathon by \*\*AW BI\*\* and \*\*AstraZeneca\*\*, held from \*\*November 24 to December 16, 2025\*\*.
 
 
 
-\## Для кого
+\## Contest overview
 
-Конкурс проводился для \*\*BI-аналитиков\*\*, готовых работать с \*\*живыми данными\*\* и \*\*реальными бизнес-кейсами\*\* в командном формате.
-
-
-
-\## Ценность
-
-\- Опыт решения задачи от \*\*крупного международного игрока\*\* фарм-индустрии.
-
-\- \*\*Обратная связь от экспертов\*\*.
-
-\- Возможность побороться за \*\*призовой фонд 200 000 рублей\*\*.
+Participants were given a \*\*real analytical task\*\* from the pharmaceutical company \*\*AstraZeneca\*\*. The goal was to work in a team to build a \*\*clear, interactive business dashboard\*\* in the \*\*AW BI\*\* system that solves a specific business problem.
 
 
 
-\## Личный результат
+\## Who it was for
 
-🥈 \*\*2 место\*\*
+The contest was aimed at \*\*BI analysts\*\* ready to work with \*\*live data\*\* and \*\*real business cases\*\* in a team format.
 
 
 
-\## Публичная ссылка
+\## Value
 
-\[Открыть дашборд](https://aw-demo.ru/public/dashboard/RCY3mUrwc29ZlD8x8dmHjI36g8FJ4gs7)
+\- Experience solving a task from a \*\*major international player\*\* in the pharma industry.
+
+\- \*\*Feedback from experts\*\*.
+
+\- A chance to compete for a \*\*prize fund of 200,000 rubles\*\*.
+
+
+
+\## Personal result
+
+🥈 \*\*2nd place\*\*
+
+
+
+\## Public link
+
+\[Open dashboard](https://aw-demo.ru/public/dashboard/RCY3mUrwc29ZlD8x8dmHjI36g8FJ4gs7)
 

@@ -1,46 +1,46 @@
-\# Дашборды: Yandex DataLens Festival
+\# Dashboards: Yandex DataLens Festival
 
 
 
-\## О проекте
+\## About the project
 
-Дашборды разработаны в рамках \*\*Yandex DataLens Festival\*\* — ежегодного бесплатного онлайн- и офлайн-события от \*\*Yandex Cloud\*\* для аналитиков, разработчиков, продакт-менеджеров и всех, кто работает с визуализацией и анализом данных.
-
-
-
-\## Суть конкурса
-
-В рамках фестиваля проходили \*\*соревновательные активности по визуализации данных\*\* — участники создавали дашборды на основе \*\*открытых датасетов\*\* в BI-системе \*\*Yandex DataLens\*\*. Задача — не просто построить графики, а собрать \*\*понятный аналитический инструмент\*\*, который выдерживает сравнение с работами других участников.
+The dashboards were created as part of the \*\*Yandex DataLens Festival\*\* — an annual free online and offline event by \*\*Yandex Cloud\*\* for analysts, developers, product managers, and anyone working with data visualization and analysis.
 
 
 
-\## Для кого
+\## Contest overview
 
-Фестиваль проводился как для \*\*начинающих\*\*, так и для \*\*опытных аналитиков\*\*, разработчиков, руководителей и энтузиастов работы с данными.
-
-
-
-\## Ценность
-
-\- Доступ к \*\*практическим мастер-классам\*\* и докладам о лучших практиках построения дашбордов.
-
-\- \*\*Разбор реальных кейсов\*\* применения BI-системы.
-
-\- \*\*Обратная связь от экспертов\*\*.
-
-\- Возможность побороться за \*\*призовые места\*\* в конкурсной программе.
+The festival featured \*\*competitive data visualization activities\*\* — participants built dashboards based on \*\*open datasets\*\* in the \*\*Yandex DataLens\*\* BI system. The goal was not just to build charts, but to create a \*\*clear analytical tool\*\* that could stand comparison with other participants' work.
 
 
 
-\## Личный результат
+\## Who it was for
 
-🏅 \*\*Топ-5 лучших работ\*\*
+The festival was open to both \*\*beginners\*\* and \*\*experienced analysts\*\*, developers, managers, and data enthusiasts.
 
 
 
-\## Публичные ссылки на проекты
+\## Value
 
-\- \[Проект 1](https://datalens.yandex/d2bb0nm4edfo4)
+\- Access to \*\*hands-on workshops\*\* and talks on dashboard best practices.
 
-\- \[Проект 2](https://datalens.yandex/duou3b6w0dvs4)
+\- \*\*Real-world case studies\*\* of BI system applications.
+
+\- \*\*Feedback from experts\*\*.
+
+\- A chance to compete for \*\*prize places\*\* in the contest program.
+
+
+
+\## Personal result
+
+🏅 \*\*Top-5 best works\*\*
+
+
+
+\## Public links to projects
+
+\- \[Project 1](https://datalens.yandex/d2bb0nm4edfo4)
+
+\- \[Project 2](https://datalens.yandex/duou3b6w0dvs4)
 
