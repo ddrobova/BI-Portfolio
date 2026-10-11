@@ -10,10 +10,10 @@ This repository is my personal BI portfolio, focused on data visualization and d
 
 The portfolio is organized into folders, each containing examples of dashboards built in different BI tools:
 
-- **Contests & Hackathons in Data Visualization**
-- **Tableau**
-- **Power BI** (*Interactive CV and Dashboard Redesign projects*)
-- **Open-source BI tools**
+- [Contests & Hackathons in Data Visualization](Contests%20links.md)
+- [Tableau](Tableau%20links.md)
+- [Power BI](Power%20links.md) (*Interactive CV and Dashboard Redesign projects*)
+- [Open-source BI tools](Open-source%20links.md)
 
 Each folder includes dashboards and projects created in the corresponding tool, `README.md` file contain additional context and public link to the dashboards.
 
