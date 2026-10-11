@@ -3,6 +3,7 @@
 Welcome! 👋
 
 My name is **Darya Drobova**. I've been working as a **BI developer/BI analyst** for over **12 years** and I genuinely love what I do. 
+
 This repository is my personal BI portfolio, focused on data visualization and dashboard design.
 
 ## What's inside
