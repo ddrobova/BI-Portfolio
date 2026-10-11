@@ -10,10 +10,10 @@ This repository is my personal BI portfolio, focused on data visualization and d
 
 The portfolio is organized into folders, each containing examples of dashboards built in different BI tools:
 
-- [Contests & Hackathons in Data Visualization](Contests%20links.md)
-- [Tableau](Tableau%20links.md)
-- [Power BI](Power%20links.md) (*Interactive CV and Dashboard Redesign projects*)
-- [Open-source BI tools](Open-source%20links.md)
+- [Contests & Hackathons in Data Visualization](DataViz%20Contests%20%26%20Hackathons)
+- [Tableau](Tableau)
+- [Power BI](Power%20BI) (*Interactive CV and Dashboard Redesign projects*)
+- [Open-source BI tools](Open-source%20BI%20tools)
 
 Each folder includes dashboards and projects created in the corresponding tool, `README.md` file contain additional context and public link to the dashboards.
 
@@ -31,4 +31,4 @@ For any additional information, feel free to reach out to me directly.
 - LinkedIn: [Darya Drobova](https://www.linkedin.com/in/darya-drobova-956470b8/)
 - GMail: konkolovich.d@gmail.com
 
-Thanks you!
+Thank you!
