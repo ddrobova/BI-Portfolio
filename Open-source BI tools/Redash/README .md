@@ -1,1 +1,0 @@
-Creating a dashboard as part of self-study of a BI tool.
