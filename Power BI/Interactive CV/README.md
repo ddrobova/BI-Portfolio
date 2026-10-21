@@ -1,6 +1,8 @@
 ## About the project
 A Power BI report created for an **internal meetup**, where the tool's capabilities were demonstrated — **not only for corporate reporting**, but also for **personal tasks**, such as building an **interactive CV**.
 
+<img width="1461" height="1009" alt="image" src="https://github.com/user-attachments/assets/04a60bc4-414a-4fba-b4e5-12eb851b078c" />
+
 ## What's inside
 - **`.pbi`** — project folder with the dataset (my CV converted into Excel format)
 - **Meetup presentation**
