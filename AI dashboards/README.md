@@ -8,6 +8,8 @@ Interactive dashboard for used car market analysis, built as an experiment in AI
 
 🔗 **[Live Demo](https://car-analytics-2026.surge.sh/)**
 
+<img width="1927" height="1057" alt="image" src="https://github.com/user-attachments/assets/7d25eff4-3b70-44c6-baed-02036c6ca558" />
+
 ---
 
 ## 📊 About
