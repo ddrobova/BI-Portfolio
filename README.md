@@ -14,7 +14,7 @@ The portfolio is organized into folders, each containing examples of dashboards 
 - [Tableau](Tableau)
 - [Contests & Hackathons in Data Visualization](DataViz%20Contests%20%26%20Hackathons)
 - [Open-source BI tools](Open-source%20BI%20tools)
-- [AI-Assisted Dashboard](AI-Dashboard) 
+- [AI-Assisted Dashboard](https://github.com/ddrobova/BI-Portfolio/tree/main/AI%20dashboards)
 
 Each folder includes dashboards and projects created in the corresponding tool. The `README.md` files contain additional context and public links to the dashboards.
 
