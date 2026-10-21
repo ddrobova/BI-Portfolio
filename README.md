@@ -2,7 +2,7 @@
 
 Welcome! 👋
 
-My name is **Darya Drobova**. I've been working as a **BI developer/BI analyst** for over **12 years** and I genuinely love what I do. 
+My name is **Darya Drobova**. I've been working as a **Senior BI developer/BI analyst** for over **12 years** and I genuinely love what I do. 
 
 This repository is my personal BI portfolio, focused on data visualization and dashboard design.
 
@@ -10,12 +10,13 @@ This repository is my personal BI portfolio, focused on data visualization and d
 
 The portfolio is organized into folders, each containing examples of dashboards built in different BI tools:
 
-- [Contests & Hackathons in Data Visualization](DataViz%20Contests%20%26%20Hackathons)
+- [Power BI](Power%20BI)
 - [Tableau](Tableau)
-- [Power BI](Power%20BI) (*Interactive CV and Dashboard Redesign projects*)
+- [Contests & Hackathons in Data Visualization](DataViz%20Contests%20%26%20Hackathons)
 - [Open-source BI tools](Open-source%20BI%20tools)
+- [AI-Assisted Dashboard](AI-Dashboard) 
 
-Each folder includes dashboards and projects created in the corresponding tool, `README.md` file contain additional context and public link to the dashboards.
+Each folder includes dashboards and projects created in the corresponding tool. The `README.md` files contain additional context and public links to the dashboards.
 
 ## Beyond dashboards
 
@@ -28,7 +29,9 @@ You can also find links to my **articles** and **recordings of meetup streams** 
 
 For any additional information, feel free to reach out to me directly.
 
+- CV: [Darya_Drobova_Senior_BI_Developer.pdf](https://github.com/ddrobova/BI-Portfolio/blob/main/Darya_Drobova_Senior_BI_Developer.pdf)
 - LinkedIn: [Darya Drobova](https://www.linkedin.com/in/darya-drobova-956470b8/)
 - GMail: konkolovich.d@gmail.com
 
 Thank you!
+
