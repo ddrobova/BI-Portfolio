@@ -98,16 +98,29 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 **Contest:** Visiology / Cortex hackathon (September–November 2026).  
 
-**Team:** BI Ladies — Drobova Darya, Tratsevskaya Elena  
+**Tool:** Visiology + Cortex + Cursor + Deepseek  
 
-**Task:** Using the bank's source files and correspondence with executives in a simulator, build a dashboard that covers the needs of different departments and gives a single picture of retail deposits. A mandatory condition was the use of AI in combination with the Cortex Visiology platform's AI assistant.
+**Team:** BI Ladies (two-person team)
 
-**Business problem:** The bank needs to set deposit conditions for 91 and 181 days. The volume plan is met by the short 91-day product, while the shift to the cheaper 181-day product is weak. Both the deposit business (Irina Kovalchuk) and the treasury (Mikhail Orlov) want a shift to 181 days.
+**Task:** Using the bank's source files and correspondence with stakeholders in a simulator, build a dashboard that covers the needs of different departments and gives a single picture of retail deposits. A mandatory condition was the use of AI in combination with the Cortex Visiology platform's AI assistant.
 
-**Key insights:** The campaign worked by contact (higher response vs. control), but by the 91→181 rule over 30 days the target is below control — a targeted bonus does not shift the term better than doing nothing. The bank's rate is above the market median, the volume plan is not met, and the portfolio is shrinking. Even a +0.1 pp step in the scenario pushes CoF to or beyond the ceiling; the 91-day product is the main source of cost pressure. The 2 bn RUB alternative does not cover the main outflow; the buffer is sufficient in normal conditions, with the bottleneck being long horizons and the large-client stress.
+**Business problem:** The bank needs to set deposit conditions for 91 and 181 days. The volume plan is met by the short 91-day product, while the shift to the cheaper 181-day product is weak. Both the deposit business and the treasury want a shift to 181 days.
 
-**Conclusion:** The nine-sheet dashboard links CRM, market, price scenario, and treasury into a single picture. The working hypothesis of a shift to 181 days was confirmed by the owners; the targeted campaign tool for this shift was not proven by A/B. The rate and promo decision lies with the market and treasury within the ceiling; the buffer and the −1 bn stress are on the liquidity sheet.
+**Key insights:**
+- The campaign worked by contact (higher response vs. control), but by the 91→181 rule over 30 days the target is below control — a targeted bonus does not shift the term better than doing nothing. The campaign cannot be scaled as a way to move clients to 181 days.
+- The bank's rate is above the market median, the volume plan is not met, and the portfolio is shrinking: the bank is not paying less than the market, and the short 91-day product feeds "hot" money.
+- Even a +0.1 pp step in the scenario pushes CoF to or beyond the ceiling; the 91-day product is the main source of cost pressure.
+- The 2 bn RUB alternative does not cover the main outflow. The buffer is sufficient in normal conditions; the bottleneck is long horizons and the large-client stress.
+- A shift from 91 to a savings product is an internal reallocation, not an external outflow and not a 91→181 success.
+
+**Conclusion:** The nine-sheet dashboard links CRM, market, price scenario, and treasury into a single picture. The working hypothesis of a shift to 181 days was confirmed by the stakeholders; the targeted campaign tool for this shift was not proven by A/B. The rate and promo decision lies with the market and treasury within the ceiling; the buffer and the −1 bn stress are on the liquidity sheet.
 
 **Result:** *(add result)*
+
+<img width="1725" height="971" alt="02_Л3_Анализ рынка и стоимость фондирования" src="https://github.com/user-attachments/assets/2aec66b6-e969-47c2-899e-9b3a658f6abc" />
+
+
+<img width="1340" height="755" alt="02_Л4_Сценарий «стоимость vs объём" src="https://github.com/user-attachments/assets/18c59225-62e9-44b6-9aab-4ef1d20f49dd" />
+
 
 <br>
