@@ -5,13 +5,11 @@ Author: Darya Drobova (BI Developer & BI Analyst).
 
 This folder brings together dashboards, analytical solutions, and experiments with various BI tools.
 
----
-
 ## Projects
 
 <br>
 
-### AW BI — PharmaDash
+### [AW BI — PharmaDash](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/AW%20BI%20(win))
 
 **Contest:** PharmaDash contest-hackathon by AW BI and AstraZeneca (November 24 – December 16, 2025).  
 **Tool:** AW BI  
@@ -28,7 +26,7 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 <br>
 
-### DataLens — Yandex DataLens Festival
+### [DataLens — Yandex DataLens Festival](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/DataLens%20(top%205))
 
 **Contest:** Yandex DataLens Festival — an annual free online and offline event by Yandex Cloud for analysts, developers, product managers, and anyone working with data visualization and analysis.  
 **Tool:** Yandex DataLens  
@@ -45,7 +43,7 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 <br>
 
-### Fastboard — Cosmetics Company Analytics
+### [Fastboard — Cosmetics Company Analytics](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/Fastboard%20(win))
 
 **Contest:** Dashboard Contest for BI Analysts on the Fastboard BI platform — a Russian visual data analysis system.  
 **Tool:** Fastboard  
@@ -63,7 +61,7 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 <br>
 
-### PIX BI — Intelligent Fund: Oil & Gas Well Analytics (Winner)
+### [PIX BI — Intelligent Fund: Oil & Gas Well Analytics (Winner)](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/PIX%20BI%20(win))
 
 **Contest:** Dashboard contest "Intelligent Fund: Oil & Gas Well Analytics" by PIX Robotics and the "Educational League of Vendors" professional community.  
 **Tool:** PIX BI  
@@ -78,7 +76,7 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 <br>
 
-### Visiology — Cortex Challenge (Retail Deposits Dashboard)
+### [Visiology — Cortex Challenge (Retail Deposits Dashboard)](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/Visiology)
 
 **Contest:** Visiology / Cortex hackathon (September–November 2026).  
 **Tool:** Visiology + Cortex + Cursor + Deepseek  
@@ -91,7 +89,6 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 **Conclusion:** The nine-sheet dashboard links CRM, market, price scenario, and treasury into a single picture. The working hypothesis of a shift to 181 days was confirmed by the owners; the targeted campaign tool for this shift was not proven by A/B. The rate and promo decision lies with the market and treasury within the ceiling; the buffer and the −1 bn stress are on the liquidity sheet.
 
-**Result:** *(add result)*  
-**Folder:** [Open folder](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/Visiology)
+**Result:** *(add result)*
 
 <br>
