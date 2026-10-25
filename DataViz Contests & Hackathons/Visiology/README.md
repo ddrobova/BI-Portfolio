@@ -4,7 +4,12 @@ Retail deposits dashboard for Severny Kontur bank: CRM retention, funding cost &
 
 Сроки проведения хакатона: сентябрь–ноябрь 2026
 
+<img width="341" height="52" alt="image" src="https://github.com/user-attachments/assets/1fd412ea-f212-41b7-bd00-3c76d7ecf5e7" />
+
 Состав команды BI Ladies: Дробова Дарья, Трацевская Елена
+
+<img width="195" height="63" alt="image" src="https://github.com/user-attachments/assets/bf2deeff-3183-4cf5-8a6f-ee6ce1afe3e7" />
+
 
 ## Задание конкурса
 
