@@ -5,40 +5,59 @@ Author: Darya Drobova (BI Developer & BI Analyst).
 
 This folder brings together dashboards, analytical solutions, and experiments with various BI tools.
 
-## Contents
+## Projects
 
-| Folder / Project | Contest / Event | Tool | Brief description |
-|---|---|---|---|
-| `Fastboard_2025` | Fastboard Data Visualization Competition | Fastboard | Dashboard based on cosmetics store data. **Grand Prix** among experts. |
-| `Plan_vs_Actual_Gallery` | Personal case / community | Tableau | A gallery of solutions for visualizing "Plan vs Actual" comparisons. |
-| *(add when available)* | | | |
+### AW BI — PharmaDash
+**Contest:** PharmaDash contest-hackathon by AW BI and AstraZeneca (November 24 – December 16, 2025).  
+**Tool:** AW BI  
+**Task:** Participants were given a real analytical task from AstraZeneca. The goal was to work in a team to build a clear, interactive business dashboard in AW BI that solves a specific business problem. The contest targeted BI analysts ready to work with live data and real business cases in a team format.  
+**Value:** Experience solving a task from a major international player in the pharma industry, expert feedback, and a chance to compete for a prize fund of 200,000 rubles.  
+**Result:** 🥈 2nd place  
+**Public link:** [Dashboard](https://aw-demo.ru/public/dashboard/RCY3mUrwc29ZlD8x8dmHjI36g8FJ4gs7)
 
-> **Note:** The list above is an example based on public sources.  
-> The actual contents of the folder may differ. Update the table as projects are added.
 
-## Project descriptions
 
-### Fastboard_2025
-Participation in the Fastboard data visualization competition.  
-Task: build an interactive dashboard from scratch based on a cosmetics store dataset.  
-Result: Grand Prix by expert evaluation.  
-Links: [post about the win](https://www.linkedin.com/posts/darya-drobova-956470b8_fastboard-bi-data-activity-7399909330461933569-Ii6z).
 
-### Plan_vs_Actual_Gallery
-Research and a curated selection of optimal chart types for comparing planned and actual metrics.  
-Includes examples for different business scenarios.  
-Link: [Tableau Public](https://lnkd.in/e6NujmEU) (from the post).
+### DataLens — Yandex DataLens Festival 
+**Contest:** Yandex DataLens Festival — an annual free online and offline event by Yandex Cloud for analysts, developers, product managers, and anyone working with data visualization and analysis.  
+**Tool:** Yandex DataLens  
+**Task:** Participants built dashboards based on open datasets in Yandex DataLens. The goal was not just to build charts, but to create a clear analytical tool that could stand comparison with other participants' work. The festival was open to both beginners and experienced analysts, developers, managers, and data enthusiasts.  
+**Value:** Hands-on workshops and talks on dashboard best practices, real-world BI case studies, expert feedback, and a chance to compete for prize places in the contest program.  
+**Result:** 🏅 Top-5 best works  
+**Projects:**  [Project 1](https://datalens.yandex/d2bb0nm4edfo4), [Project 2](https://datalens.yandex/duou3b6w0dvs4)
 
-## How to use
 
-Each folder contains:
-- source data (if permitted by the contest rules);
-- dashboard files (`.twbx`, `.pbix`, `.dx`, etc.);
-- screenshots or PDF versions;
-- a brief description of the task and findings.
 
-## Contacts
 
-- GitHub: [ddrobova](https://github.com/ddrobova)
-- Tableau Public: [Darya Drobova](https://public.tableau.com/app/profile/darya.drobova)
-- LinkedIn: [Darya Drobova](https://www.linkedin.com/in/darya-drobova-956470b8/)
+### Fastboard — Cosmetics Company Analytics
+**Contest:** Dashboard Contest for BI Analysts on the Fastboard BI platform — a Russian visual data analysis system.  
+**Tool:** Fastboard  
+**Task:** Participants were given a real business case (a set of live data) from a cosmetics company. The goal was to build a clear, interactive dashboard on the Fastboard platform. The contest was open to both practicing analysts and those who had completed a training course on the platform.  
+**Value:** Open review ("roast") of dashboards by industry experts, certificates, and prizes.  
+**Result:** 🏆 Grand Prix (experts' choice)  
+**Public link** [Dashboard](https://demo.fastboard.online/public/6c44feb3-ec63-47ef-958d-0a0c7d5a5a23/board/e1ece6c0-94a3-4e96-9c89-6e31d6e9d0a1?f_acb97cda-443d-4d08-886b-6d54a038e66c=byYear%7C01-01-2025%7C01-01-2025%7C%7Ccompact&f_bf1cda78-e266-4f1f-9897-a8d99ee51682=Lanc%C3%B4me%7ELa+Roche-Posay%7EL%27Oreal%7EMAC%7EMax+Factor%7EGillette%7ENivea)
+**LinkedIn post:** [Fastboard Grand Prix announcement](https://www.linkedin.com/posts/darya-drobova-956470b8_fastboard-bi-data-activity-7399909330461933569-Ii6z)
+
+
+
+
+### PIX BI — Intelligent Fund: Oil & Gas Well Analytics (Winner)
+**Contest:** Dashboard contest "Intelligent Fund: Oil & Gas Well Analytics" by PIX Robotics and the "Educational League of Vendors" professional community.  
+**Tool:** PIX BI  
+**Task:** Build a business analytics dashboard for oil and gas well data as part of a multi-stage competition. Finalists defended their work in a live broadcast.  
+**Result:** 🏅 Winner (finalist defense round; Drobova Darya is listed among the finalists) [citation:1][citation:2]  
+
+![Uploading 2.png…]()
+
+
+### Visiology — Cortex Challenge (Retail Deposits Dashboard)
+**Contest:** Visiology / Cortex hackathon (September–November 2026).  
+**Tool:** Visiology + Cortex + Cursor + Deepseek  
+**Team:** BI Ladies — Drobova Darya, Tratsevskaya Elena  
+**Task:** Using the bank's source files and correspondence with executives in a simulator, build a dashboard that covers the needs of different departments and gives a single picture of retail deposits. A mandatory condition was the use of AI in combination with the Cortex Visiology platform's AI assistant.  
+**Business problem:** The bank needs to set deposit conditions for 91 and 181 days. The volume plan is met by the short 91-day product, while the shift to the cheaper 181-day product is weak. Both the deposit business (Irina Kovalchuk) and the treasury (Mikhail Orlov) want a shift to 181 days.  
+**Key insights:** The campaign worked by contact (higher response vs. control), but by the 91→181 rule over 30 days the target is below control — a targeted bonus does not shift the term better than doing nothing. The bank's rate is above the market median, the volume plan is not met, and the portfolio is shrinking. Even a +0.1 pp step in the scenario pushes CoF to or beyond the ceiling; the 91-day product is the main source of cost pressure. The 2 bn RUB alternative does not cover the main outflow; the buffer is sufficient in normal conditions, with the bottleneck being long horizons and the large-client stress.  
+**Conclusion:** The nine-sheet dashboard links CRM, market, price scenario, and treasury into a single picture. The working hypothesis of a shift to 181 days was confirmed by the owners; the targeted campaign tool for this shift was not proven by A/B. The rate and promo decision lies with the market and treasury within the ceiling; the buffer and the −1 bn stress are on the liquidity sheet.  
+**Result:** *(add result)*  
+**Folder:** [Open folder](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/Visiology)
+
