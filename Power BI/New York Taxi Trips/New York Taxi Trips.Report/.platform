@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "New York Taxi Trips"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "93303c1a-052d-4b62-97da-b978f3df277c"
+  }
+}

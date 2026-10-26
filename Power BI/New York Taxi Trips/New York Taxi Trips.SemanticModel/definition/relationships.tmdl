@@ -1,0 +1,32 @@
+relationship cf965fc2-717a-4a8b-8a91-28e4a49b1b60
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Fact.lpep_dropoff_date
+	toColumn: LocalDateTable_9c94ddeb-910c-4b18-95a6-91b0c0842faf.Date
+
+relationship c7df7868-cb1b-406f-8428-bcc6d2771e74
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Date'.Date
+	toColumn: LocalDateTable_07665794-d67c-47f1-a937-11f6cfe4de79.Date
+
+relationship 9f1fdae9-087f-4488-81cd-7753decaaeab
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Date'.'End of Month'
+	toColumn: LocalDateTable_3d1275ed-212a-4bef-9303-06ea839f3390.Date
+
+relationship 0849597e-7e14-a2d3-a19b-a7d4d18b3274
+	fromColumn: Fact.lpep_pickup_date
+	toColumn: 'Dim Date'.Date
+
+relationship 12472405-729d-5a38-725e-d57911799983
+	isActive: false
+	fromColumn: Fact.DOLocationID
+	toColumn: TaxiZones.LocationID
+
+relationship 185f418f-5b7c-e698-7282-e2d169606bc3
+	fromColumn: Fact.PULocationID
+	toColumn: TaxiZones.LocationID
+
+relationship 3f86ee6b-f344-57d1-a7ed-53ce66ba875f
+	fromColumn: Fact.'Time of Pick-up'
+	toColumn: HourTable.Value
+

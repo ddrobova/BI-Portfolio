@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Fact","Dim Date","TaxiZones","_Measures"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Fact
+ref table DateTableTemplate_68315de2-7fbd-42de-9e82-e5fc57710466
+ref table LocalDateTable_9c94ddeb-910c-4b18-95a6-91b0c0842faf
+ref table 'Dim Date'
+ref table LocalDateTable_07665794-d67c-47f1-a937-11f6cfe4de79
+ref table LocalDateTable_3d1275ed-212a-4bef-9303-06ea839f3390
+ref table TaxiZones
+ref table _Measures
+ref table HourTable
+
+ref cultureInfo en-US
+

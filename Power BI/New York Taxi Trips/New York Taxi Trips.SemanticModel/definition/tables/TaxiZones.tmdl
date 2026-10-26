@@ -1,0 +1,49 @@
+table TaxiZones
+	lineageTag: 830e81ae-f192-43d5-8f8f-96511d8054fd
+
+	column LocationID
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d55f328-4652-45d4-81fa-14b15f31dbc6
+		summarizeBy: none
+		sourceColumn: LocationID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Borough
+		dataType: string
+		lineageTag: 207995fc-7b9b-435a-afd9-f5c1f1ccca2c
+		summarizeBy: none
+		sourceColumn: Borough
+
+		annotation SummarizationSetBy = Automatic
+
+	column Zone
+		dataType: string
+		lineageTag: 1f81b933-ecc0-472e-b9c4-f83d9c6176d0
+		summarizeBy: none
+		sourceColumn: Zone
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_zone
+		dataType: string
+		lineageTag: 016275a0-0b33-4e3c-9820-a10c107c2cbf
+		summarizeBy: none
+		sourceColumn: service_zone
+
+		annotation SummarizationSetBy = Automatic
+
+	partition TaxiZones = m
+		mode: import
+		source =
+				let
+				  Source = Json.Document(File.Contents("D:\power-bi-project-lab\Project 1\TaxiZones.json")),
+				  #"Converted to table" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				  #"Expanded Column1" = Table.ExpandRecordColumn(#"Converted to table", "Column1", {"LocationID", "Borough", "Zone", "service_zone"}, {"LocationID", "Borough", "Zone", "service_zone"}),
+				  #"Changed column type" = Table.TransformColumnTypes(#"Expanded Column1", {{"LocationID", Int64.Type}, {"Borough", type text}, {"Zone", type text}, {"service_zone", type text}})
+				in
+				  #"Changed column type"
+
+	annotation PBI_ResultType = Table
+

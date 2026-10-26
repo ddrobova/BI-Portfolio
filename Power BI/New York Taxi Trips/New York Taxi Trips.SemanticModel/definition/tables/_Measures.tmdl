@@ -1,0 +1,676 @@
+table _Measures
+	lineageTag: 2f8270c7-26f9-4ce9-a22a-4306c533fa6b
+
+	measure 'Trips Num' = COUNTROWS('Fact')
+		formatString: #,0
+		displayFolder: Total Numbers
+		lineageTag: b181f68e-d885-404f-bb92-afdd506a3ccd
+
+	measure 'Passengers Num' = ```
+			SUM('Fact'[passenger_count]) 
+			```
+		formatString: #,0
+		displayFolder: Total Numbers
+		lineageTag: 07e8e8ad-2ca2-427c-bcae-84057ceccd4d
+
+	measure 'Tip amount' = sum ( 'Fact'[tip_amount])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: Total Numbers
+		lineageTag: 21bea5f2-36ec-4b30-99d4-4f91848f3c24
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Total Fare per Tips' = sum( 'Fact'[fare_amount])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: Total Numbers
+		lineageTag: b6f616c5-dad0-4419-b2ee-9394c42b6675
+
+	measure 'AVG Fare per Tips' = AVERAGE('Fact'[fare_amount])
+		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
+		displayFolder: Total Numbers
+		lineageTag: fdbfd4a8-1f89-4a65-8996-3a5065f8ec17
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'AVG Tip Amount' = DIVIDE([Tip amount],[Trips Num])
+		formatString: \$#,0.0;(\$#,0.0);\$#,0.0
+		displayFolder: Total Numbers
+		lineageTag: 7b729d4f-ecf8-448d-b422-3f7e11d9f422
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'AVG Trip Distance' = AVERAGE('Fact'[trip_distance])
+		formatString: 0.0
+		displayFolder: Total Numbers
+		lineageTag: 7bee739e-a1ea-49b8-9dd8-955936309102
+
+	measure 'Trips Num Dropoff Location' = CALCULATE([Trips Num], USERELATIONSHIP('Fact'[DOLocationID], TaxiZones[LocationID]))
+		formatString: 0
+		displayFolder: Total Numbers
+		lineageTag: b3ae9b38-f60e-41b6-b1ad-2f9fc444b656
+
+	measure 'Borough Color' =
+			
+			VAR _Borough = SELECTEDVALUE(TaxiZones[Borough])
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    _Borough = "Queens", "#647CA1",
+			    _Borough = "Brooklyn", "#778EB4",
+			    _Borough = "Manhattan", "#93ABD2",
+			    _Borough = "Bronx", "#D4DDED"
+			)
+		displayFolder: Colors
+		lineageTag: 18d367f0-3828-4b08-8d69-28b5d109ef93
+
+	measure '% Of Total Num Trips' =
+			
+			DIVIDE(
+			    [Trips Num],
+			    CALCULATE(
+			        [Trips Num],
+			        REMOVEFILTERS(TaxiZones[Borough])
+			    )
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: Total Numbers
+		lineageTag: 32a45194-89ad-4fdb-8665-73de7476d5a0
+
+	measure 'Top 1 Payment Type' = ```
+			
+			VAR PaymentSummary = 
+			ADDCOLUMNS(
+			    VALUES('Fact'[paymeny_time_detailed]),
+			    "TripsCount",
+			    CALCULATE(
+			        [Trips Num]
+			    )
+			)
+			
+			VAR TopRow = 
+			TOPN(
+			    1,
+			    PaymentSummary,
+			    [TripsCount],
+			    DESC
+			)
+			RETURN
+			MAXX(TopRow, 'Fact'[paymeny_time_detailed])
+			```
+		displayFolder: Total Numbers
+		lineageTag: 0218a81e-819a-4164-b31f-ac357f9c8ba1
+
+	measure 'Trip Num for Matrix (no blank values)' = COALESCE([Trips Num],0)
+		formatString: 0
+		displayFolder: Total Numbers
+		lineageTag: 9f8b51a5-f80e-487b-b523-5077ef047210
+
+	measure 'Color for Week Day' = ```
+			
+			
+			VAR CurrentNum = [Trips Num]
+			
+			VAR MaxNumber = 
+			CALCULATE(
+			    MAXX(VALUES('Dim Date'[Week Day]), [Trips Num]),
+			    ALLSELECTED('Dim Date')
+			)
+			
+			VAR MinNum = 
+			CALCULATE(
+			    MINX(VALUES('Dim Date'[Week Day]), [Trips Num]),
+			    ALLSELECTED('Dim Date')
+			)
+			
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    CurrentNum = MaxNumber, "#2E8B57",
+			    CurrentNum = MinNum, "#de283b",
+			    "#647CA1"
+			)
+			
+			```
+		displayFolder: Colors
+		lineageTag: 2dc2ea08-6404-4978-814e-b6132c12ff5c
+
+	measure 'Color for Time' = ```
+			
+			
+			VAR CurrentNum = [Trips Num]
+			
+			VAR MaxNumber = 
+			CALCULATE(
+			    MAXX(VALUES('HourTable'[HourFormatted]), [Trips Num]),
+			    ALLSELECTED('HourTable')
+			)
+			
+			VAR MinNum = 
+			CALCULATE(
+			    MINX(VALUES('HourTable'[HourFormatted]), [Trips Num]),
+			    ALLSELECTED('HourTable')
+			)
+			
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    CurrentNum = MaxNumber, "#2E8B57",
+			    CurrentNum = MinNum, "#de283b",
+			    "#647CA1"
+			)
+			```
+		displayFolder: Colors
+		lineageTag: 4ed17c34-e9a2-4a08-bb08-df754c5ac636
+
+	measure 'Trips Number Summary HTML' = ```
+			
+			
+			VAR BestWeekDay =
+			MAXX(
+			    TOPN(
+			        1,
+			        ADDCOLUMNS(
+			            VALUES('Dim Date'[FullDayName]),
+			            "TripCount", [Trip Num for Matrix (No Blank Values)]
+			        ),
+			        [TripCount],
+			        DESC,
+			        'Dim Date'[FullDayName]
+			    ),
+			    'Dim Date'[FullDayName] -- ИСПРАВЛЕНИЕ: извлекаем название дня (текст), а не количество
+			)
+			
+			VAR TotalTripsOnBestDay = 
+			CALCULATE(
+			    [Trips Num],
+			    'Dim Date'[FullDayName] = BestWeekDay
+			)
+			
+			VAR Windows = 
+			ADDCOLUMNS(
+			    GENERATESERIES(0,20,1),
+			    "WindowSum",
+			    CALCULATE(
+			        [Trips Num],
+			        FILTER(
+			            'Fact',
+			            HOUR('Fact'[lpep_pickup_time]) >= [Value] &&
+			            HOUR('Fact'[lpep_pickup_time]) <= [Value] + 3
+			        ),
+			        'Dim Date'[FullDayName] = BestWeekDay
+			    )
+			)
+			
+			VAR BestWindow =
+			TOPN(
+			    1, Windows, [WindowSum], DESC
+			)
+			
+			VAR BestStartHour = MINX(BestWindow, [Value])
+			VAR BestEndHour = BestStartHour + 3
+			
+			VAR BestWindowTripCount = MINX(BestWindow, [WindowSum])
+			
+			VAR PercentofTotal =
+			DIVIDE(BestWindowTripCount, TotalTripsOnBestDay, 0)
+			
+			RETURN
+			
+			"<p style='font-family:""Segoe UI Semibold"", sans-serif;font-size:16px;color:black;'>" &
+			    "The Biggest Number Of Trips " &
+			    "<span style='color:#647CA1;'><strong>" &
+			    FORMAT(BestWindowTripCount, "#,0") &
+			    "</strong></span> " &
+			    "<span style='color:green;'>" &
+			    FORMAT(PercentofTotal, "0%") &
+			    "</span> Occurs on " &
+			    "<span style='color:#647CA1;'><strong>" &
+			    BestWeekDay &
+			    "</strong></span> from " &
+			    "<span style='color:green;'><strong>" &
+			    FORMAT(TIME(BestStartHour, 0, 0), "h AM/PM") & " to " &
+			    FORMAT(TIME(BestEndHour, 0, 0), "h AM/PM") &
+			    "</strong></span>" &
+			"</p>"
+			```
+		lineageTag: 751c5ee7-c2dc-44ff-8c3d-f0abb3d4a663
+
+	measure 'Top 1 Drop-Off Zone HTML with %' = ```
+			
+			VAR ZoneSummary =
+			    ADDCOLUMNS(
+			        VALUES( TaxiZones[Zone] ),
+			        "DropoffCount", CALCULATE( [Trips Num Dropoff Location] )
+			    )
+			VAR TopTable =
+			    TOPN(
+			        1,
+			        ZoneSummary,
+			        [DropoffCount], DESC
+			    )
+			VAR Zone1  = MAXX( TopTable, TaxiZones[Zone] )
+			VAR Count1 = MAXX( TopTable, [DropoffCount] )
+			VAR TotalDrops =
+			    CALCULATE( [Trips Num Dropoff Location] )
+			VAR Pct1 = DIVIDE( Count1, TotalDrops, 0 )
+			RETURN
+			    "<p style='font-family:""Segoe UI Semibold"", sans-serif; font-size:16px; color:black;'>
+			       The Most Popular Drop-Off Location is: 
+			       <span style='color:#647CA1;'><strong>" & Zone1 & "</strong></span> " &
+			       FORMAT( Count1, "#,0" ) & " Trips (<span style='color:green;'>" &
+			       FORMAT( Pct1, "0%" ) & "</span>)
+			     </p>"
+			```
+		lineageTag: ce981d57-0314-45da-86f4-00bab0d96fb1
+
+	measure 'Top 2 Pick Up Zones HTML with %' = ```
+			
+			VAR ZoneSummary =
+			    ADDCOLUMNS(
+			        VALUES( TaxiZones[Zone] ),
+			        "PickupCount", CALCULATE( [Trips Num] )
+			    )
+			
+			// Zone 1 and its count
+			VAR Top1Table =
+			    TOPN(
+			        1,
+			        ZoneSummary,
+			        [PickupCount], DESC
+			    )
+			VAR Zone1  = MAXX( Top1Table, TaxiZones[Zone] )
+			VAR Count1 = MAXX( Top1Table, [PickupCount] )
+			
+			// Zone 2 and its count
+			VAR Top2Table =
+			    TOPN(
+			        1,
+			        FILTER(
+			            ZoneSummary,
+			            TaxiZones[Zone] <> Zone1
+			        ),
+			        [PickupCount], DESC
+			    )
+			VAR Zone2  = MAXX( Top2Table, TaxiZones[Zone] )
+			VAR Count2 = MAXX( Top2Table, [PickupCount] )
+			
+			// Total trips across all zones (in current filter context)
+			VAR TotalTrips =
+			    CALCULATE( [Trips Num] )
+			
+			// Percentage of total for each top zone
+			VAR Pct1 = DIVIDE( Count1, TotalTrips, 0 )
+			VAR Pct2 = DIVIDE( Count2, TotalTrips, 0 )
+			
+			RETURN
+			    "<p style='font-family:""Segoe UI Semibold"", sans-serif; font-size:16px; color:black;'>
+			       The Most Popular 2 Pick-Up Locations are:
+			       <br/>
+			       <span style='color:#647CA1;'><strong>" & Zone1 & "</strong></span> " &
+			         FORMAT( Count1, "#,0" ) & " Trips (<span style='color:green;'>" &
+			         FORMAT( Pct1, "0%" ) & "</span>)
+			       and <span style='color:#647CA1;'><strong>" & Zone2 & "</strong></span> " &
+			         FORMAT( Count2, "#,0" ) & " Trips (<span style='color:green;'>" &
+			         FORMAT( Pct2, "0%" ) & "</span>)
+			     </p>"
+			
+			```
+		lineageTag: 16d76e11-1ff9-4d42-951a-3f970d4e521d
+
+	measure '_1 Previous Month Trips Num' =
+			
+			if (hasonevalue('Dim Date'[Month Name]),
+			CALCULATE(
+			    [Trips Num],
+			    PREVIOUSMONTH('Dim Date'[Date])
+			),
+			BLANK()
+			)
+		formatString: #,0
+		displayFolder: MoM Measures\Trips Num
+		lineageTag: 68800136-66ab-406c-8554-985893a1f111
+
+	measure '_1 Previous Month Trips Color' =
+			
+			var _Delta = [Trips Num]- [_1 Previous Month Trips Num]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _Delta>0, "#038D96",
+			        _Delta=0, "#FFFF00",
+			        _Delta<0, "#A84545"
+			    )
+		displayFolder: MoM Measures\Trips Num
+		lineageTag: 9ab38993-340e-4b0b-a9f4-a929e1ef1425
+
+	measure '_1 Previous Month Trips BG Color' =
+			
+			var _Delta = [Trips Num]- [_1 Previous Month Trips Num]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _Delta>0, "#E7F3F5",
+			        _Delta=0, "#FFFF00",
+			        _Delta<0, "#F6EDED"
+			    )
+		displayFolder: MoM Measures\Trips Num
+		lineageTag: 22139461-cc53-42e1-b103-ee53eafa9ce6
+
+	measure '_1 Text Trips Num' =
+			
+			
+			VAR _Current = [Trips Num]
+			VAR _PrMonth = [_1 Previous Month Trips Num]
+			VAR _Growth = DIVIDE(_Current-_PrMonth, _PrMonth)
+			
+			RETURN
+			IF(_Growth <> 0,
+			    FORMAT(_Current-_PrMonth, "#,##0")
+			    & FORMAT(_Growth, " | 0.0% ▲; | 0.0% ▼;")
+			    & " MoM",
+			    BLANK()
+			)
+		displayFolder: MoM Measures\Trips Num
+		lineageTag: 2f4670c5-aef3-4c16-85fb-74d32e37e9b5
+
+	measure '_1 Previous Month Total Fare per Tips' =
+			
+			if (hasonevalue('Dim Date'[Month Name]),
+			CALCULATE(
+			    [Total Fare per Tips],
+			    PREVIOUSMONTH('Dim Date'[Date])
+			),
+			BLANK()
+			)
+		formatString: #,0
+		displayFolder: MoM Measures\Total Fire
+		lineageTag: 7376dca5-53ee-4915-a59d-832b76442bad
+
+	measure '_1 Previous Month Passengers Num' =
+			
+			if (hasonevalue('Dim Date'[Month Name]),
+			CALCULATE(
+			    [Passengers Num],
+			    PREVIOUSMONTH('Dim Date'[Date])
+			),
+			BLANK()
+			)
+		formatString: 0
+		displayFolder: MoM Measures\Passengers
+		lineageTag: 7bdf948f-bab6-440e-9873-4781a1a0b0e2
+
+	measure '_1 Previous Month AVG Fare per Tips' =
+			
+			if (hasonevalue('Dim Date'[Month Name]),
+			CALCULATE(
+			    [AVG Fare per Tips],
+			    PREVIOUSMONTH('Dim Date'[Date])
+			),
+			BLANK()
+			)
+		displayFolder: MoM Measures\AVG Fire
+		lineageTag: 66821f10-55b8-4eca-a118-6b50325205de
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '_1 Previous Month AVG Tip Amount' =
+			
+			if (hasonevalue('Dim Date'[Month Name]),
+			CALCULATE(
+			    [AVG Tip Amount],
+			    PREVIOUSMONTH('Dim Date'[Date])
+			),
+			BLANK()
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		displayFolder: MoM Measures\AVG Tip Am
+		lineageTag: e149be43-8e9e-47f8-8036-2e6226bbf943
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure '_1 Previous Month AVG Trip Distance' =
+			
+			if (hasonevalue('Dim Date'[Month Name]),
+			CALCULATE(
+			    [AVG Trip Distance],
+			    PREVIOUSMONTH('Dim Date'[Date])
+			),
+			BLANK()
+			)
+		displayFolder: MoM Measures\AVG Trip Dis
+		lineageTag: f49b1e29-beb8-49de-bc70-503e39adc5a7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '_1 Previous Month Total Fare per Tips Color' =
+			
+			var _Delta = [Total Fare per Tips]- [_1 Previous Month Total Fare per Tips]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _Delta>0, "#038D96",
+			        _Delta=0, "#FFFF00",
+			        _Delta<0, "#A84545"
+			    )
+		displayFolder: MoM Measures\Total Fire
+		lineageTag: 0f79273e-fa36-402a-8a80-0500f33a8268
+
+	measure '_1 Previous Month Passenger Color' =
+			
+			var _Delta = [Passengers Num]- [_1 Previous Month Passengers Num]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _Delta>0, "#038D96",
+			        _Delta=0, "#FFFF00",
+			        _Delta<0, "#A84545"
+			    )
+		displayFolder: MoM Measures\Passengers
+		lineageTag: 53c26ada-8af4-476f-800f-ee9b63cec744
+
+	measure '_1 Previous Month AVG Trip Distance Color' =
+			
+			var _Delta = [AVG Trip Distance]- [_1 Previous Month AVG Trip Distance]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _Delta>0, "#038D96",
+			        _Delta=0, "#FFFF00",
+			        _Delta<0, "#A84545"
+			    )
+		displayFolder: MoM Measures\AVG Trip Dis
+		lineageTag: 503e60f4-8e9e-4a8b-84fc-4c6d48dab982
+
+	measure '_1 Previous Month AVG Tip Amount Color' =
+			
+			var _Delta = [AVG Tip Amount]- [_1 Previous Month AVG Tip Amount]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _Delta>0, "#038D96",
+			        _Delta=0, "#FFFF00",
+			        _Delta<0, "#A84545"
+			    )
+		displayFolder: MoM Measures\AVG Tip Am
+		lineageTag: ba0e5b5a-8de6-4f22-be04-cb9aafdce366
+
+	measure '_1 Previous Month AVG Fare per Tips Color' =
+			
+			var _Delta = [AVG Fare per Tips]- [_1 Previous Month AVG Fare per Tips]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _Delta>0, "#038D96",
+			        _Delta=0, "#FFFF00",
+			        _Delta<0, "#A84545"
+			    )
+		displayFolder: MoM Measures\AVG Fire
+		lineageTag: 3fba3c64-82af-4f50-9853-179b7fe41b8b
+
+	measure '_1 Previous Month Total Fare per Tips BG Color' =
+			
+			var _Delta = [Total Fare per Tips]- [_1 Previous Month Total Fare per Tips]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _Delta>0, "#E7F3F5",
+			        _Delta=0, "#FFFF00",
+			        _Delta<0, "#F6EDED"
+			    )
+		displayFolder: MoM Measures\Total Fire
+		lineageTag: 2d2fb9f4-db67-4424-a3a1-2a3e8d856eed
+
+	measure '_1 Previous Month AVG Trip Distance BG Color' =
+			
+			var _Delta = [AVG Trip Distance]- [_1 Previous Month AVG Trip Distance]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _Delta>0, "#E7F3F5",
+			        _Delta=0, "#FFFF00",
+			        _Delta<0, "#F6EDED"
+			
+			    )
+		displayFolder: MoM Measures\AVG Trip Dis
+		lineageTag: e8f2e50d-383d-4f18-a1ed-bc3a1503af42
+
+	measure '_1 Previous Month AVG Tip Amount BG Color' =
+			
+			var _Delta = [AVG Tip Amount]- [_1 Previous Month AVG Tip Amount]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _Delta>0, "#E7F3F5",
+			        _Delta=0, "#FFFF00",
+			        _Delta<0, "#F6EDED"
+			    )
+		displayFolder: MoM Measures\AVG Tip Am
+		lineageTag: aec22a3d-abf4-41b0-8d77-c8895309d23e
+
+	measure '_1 Previous Month AVG Fare per Tips BG Color' =
+			
+			var _Delta = [AVG Fare per Tips]- [_1 Previous Month AVG Fare per Tips]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _Delta>0, "#E7F3F5",
+			        _Delta=0, "#FFFF00",
+			        _Delta<0, "#F6EDED"
+			
+			    )
+		displayFolder: MoM Measures\AVG Fire
+		lineageTag: 9b5c482c-e0b5-4503-9d19-8967938202d3
+
+	measure '_1 Previous Month Passenger BG Color' =
+			
+			var _Delta = [Passengers Num]- [_1 Previous Month Passengers Num]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _Delta>0, "#E7F3F5",
+			        _Delta=0, "#FFFF00",
+			        _Delta<0, "#F6EDED"
+			
+			    )
+		displayFolder: MoM Measures\Passengers
+		lineageTag: bcbb40dc-9ff6-4b5f-889f-4ad9e993c1ca
+
+	measure '_1 Text Passengers' =
+			
+			
+			VAR _Current = [Passengers Num]
+			VAR _PrMonth = [_1 Previous Month Passengers Num]
+			VAR _Growth = DIVIDE(_Current-_PrMonth, _PrMonth)
+			
+			RETURN
+			IF(_Growth <> 0,
+			    FORMAT(_Current-_PrMonth, "#,##0")
+			    & FORMAT(_Growth, " | 0.0% ▲; | 0.0% ▼;")
+			    & " MoM",
+			    BLANK()
+			)
+		displayFolder: MoM Measures\Passengers
+		lineageTag: 54a13d0e-21fe-40fc-9844-60ace55bc64f
+
+	measure '_1 Text AVG Fare per Tips' =
+			
+			
+			VAR _Current = [AVG Fare per Tips]
+			VAR _PrMonth = [_1 Previous Month AVG Fare per Tips]
+			VAR _Growth = DIVIDE(_Current-_PrMonth, _PrMonth)
+			
+			RETURN
+			IF(_Growth <> 0,
+			    FORMAT(_Current-_PrMonth, "#,##0")
+			    & FORMAT(_Growth, " | 0.0% ▲; | 0.0% ▼;")
+			    & " MoM",
+			    BLANK()
+			)
+		displayFolder: MoM Measures\AVG Fire
+		lineageTag: d183c981-cb30-4b60-b5df-f8c9ad574062
+
+	measure '_1 Text AVG Tip Amount' =
+			
+			
+			VAR _Current = [AVG Tip Amount]
+			VAR _PrMonth = [_1 Previous Month AVG Tip Amount]
+			VAR _Growth = DIVIDE(_Current-_PrMonth, _PrMonth)
+			
+			RETURN
+			IF(_Growth <> 0,
+			    FORMAT(_Current-_PrMonth, "#,##0")
+			    & FORMAT(_Growth, " | 0.0% ▲; | 0.0% ▼;")
+			    & " MoM",
+			    BLANK()
+			)
+		displayFolder: MoM Measures\AVG Tip Am
+		lineageTag: f33a2b0a-0f13-4a18-809d-0046315ab0e3
+
+	measure '_1 Text AVG Trip Distance' =
+			
+			
+			VAR _Current = [AVG Trip Distance]
+			VAR _PrMonth = [_1 Previous Month AVG Trip Distance]
+			VAR _Growth = DIVIDE(_Current-_PrMonth, _PrMonth)
+			
+			RETURN
+			IF(_Growth <> 0,
+			    FORMAT(_Current-_PrMonth, "#,##0")
+			    & FORMAT(_Growth, " | 0.0% ▲; | 0.0% ▼;")
+			    & " MoM",
+			    BLANK()
+			)
+		displayFolder: MoM Measures\AVG Trip Dis
+		lineageTag: d3c7e15e-6259-4c9c-bf3b-1b973c37d8dd
+
+	measure '_1 Text Total Fare per Tips' =
+			
+			
+			VAR _Current = [Total Fare per Tips]
+			VAR _PrMonth = [_1 Previous Month Total Fare per Tips]
+			VAR _Growth = DIVIDE(_Current-_PrMonth, _PrMonth)
+			
+			RETURN
+			IF(_Growth <> 0,
+			    FORMAT(_Current-_PrMonth, "#,##0")
+			    & FORMAT(_Growth, " | 0.0% ▲; | 0.0% ▼;")
+			    & " MoM",
+			    BLANK()
+			)
+		displayFolder: MoM Measures\Total Fire
+		lineageTag: 7c8639d5-8c7e-4555-8756-ac53e1111757
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				  Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Column1"})
+				in
+				  #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

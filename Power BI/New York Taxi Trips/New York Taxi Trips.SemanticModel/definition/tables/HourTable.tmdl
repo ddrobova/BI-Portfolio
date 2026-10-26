@@ -1,0 +1,32 @@
+table HourTable
+	lineageTag: 27d699b6-0825-45ff-948d-a7006f89c382
+
+	column Value
+		formatString: 0
+		lineageTag: 2d0f0284-055f-42f0-b7d2-51d90e7242b6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	column HourFormatted
+		lineageTag: 020fc9f1-bcf2-43df-9f25-36c8e3ed7cd0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [HourFormatted]
+		sortByColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition HourTable = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS(
+				    GENERATESERIES(0,23,1),
+				    "HourFormatted", FORMAT(TIME([Value],0,0), "hh:mm AM/PM")
+				)
+
+	annotation PBI_Id = 8f626da409f74c53aca2bb9227f63b39
+
