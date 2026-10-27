@@ -31,7 +31,6 @@ For any additional information, feel free to reach out to me directly.
 
 - LinkedIn: [Darya Drobova](https://www.linkedin.com/in/darya-drobova-956470b8/)
 - GMail: konkolovich.d@gmail.com
-- CV: [Darya_Drobova_Senior_BI_Developer.pdf](https://github.com/ddrobova/BI-Portfolio/blob/main/Darya_Drobova_Senior_BI_Developer.pdf)
 - Recommendation Letter: [Recommendation Letter For Darya Drobova (EffectiveSoft)](https://github.com/ddrobova/BI-Portfolio/blob/main/Recommendation%20Letter%20For%20Darya%20Drobova.pdf)
 
 Thank you!
