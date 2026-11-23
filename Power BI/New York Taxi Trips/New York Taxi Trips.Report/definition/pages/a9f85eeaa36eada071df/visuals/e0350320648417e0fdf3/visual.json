@@ -84,7 +84,7 @@
                 "Property": "HourFormatted"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
