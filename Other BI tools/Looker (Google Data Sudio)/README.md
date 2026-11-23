@@ -12,6 +12,5 @@
 
 [Looker Studio Dashboard link](https://datastudio.google.com/reporting/2e890b33-e923-4879-8421-828979df767c)
 
-<br>
+<img width="1195" height="896" alt="image" src="https://github.com/user-attachments/assets/e178b3c4-cbc6-4ef6-8afb-b3b6f0b36ab3" />
 
-<img width="1467" height="1094" alt="image" src="https://github.com/user-attachments/assets/d421934f-0623-4968-b55b-1cd666d26434" />
