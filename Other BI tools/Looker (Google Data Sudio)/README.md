@@ -2,7 +2,7 @@
 
 **Project:** Personal portfolio project exploring the same real-world NYC taxi dataset, but built entirely within the Google Cloud ecosystem using Looker Studio.  
 **Dataset:** NYC taxi trips — a real-world dataset.  
-**Task:** Recreate the analytical experience in a cloud-native BI tool, focusing on interactive cross-filtering, dynamic user controls, and clean layout design.
+**Task:** Create the analytical dashboard, focusing on interactive cross-filtering, dynamic user controls, and clean layout design.
 
 **What was done:**
 - **Data Preparation:** Connected and prepared the data source, ensuring correct data types for dates and aggregations.
