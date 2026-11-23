@@ -11,7 +11,7 @@ The portfolio is organized into folders, each containing examples of dashboards 
 - [Power BI](Power%20BI)
 - [Tableau](Tableau)
 - [Contests & Hackathons in Data Visualization](DataViz%20Contests%20%26%20Hackathons)  - AW BI, DataLens, Fastboard, PIX BI, Visiology
-- [Open-source BI tools](Open-source%20BI%20tools)  -  Metabase, Apache Superset, Redash
+- [Other BI tools](Open-source%20BI%20tools)  -  Looker, Metabase, Apache Superset, Redash
 - [AI-Assisted Dashboard](https://github.com/ddrobova/BI-Portfolio/tree/main/AI%20dashboards)
 
 Each folder includes dashboards and projects created in the corresponding tool. The `README.md` files contain additional context and public links to the dashboards.
