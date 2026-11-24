@@ -105,8 +105,9 @@ Retail deposits dashboard for Severny Kontur bank: CRM retention, funding cost &
 
 ## Итог хакатона
 
-🏅 **Специальная номинация «Лучшее понимание бизнеса» — BI Ladies**
+🏅 **Специальная номинация «Лучшее понимание бизнеса».** 
 
 За глубоко проделанную работу с виртуальными сотрудниками и симулятором.
 
-<img width="1344" height="755" alt="Награждение BI Ladies" src="ССЫЛКА_НА_ФОТО" />
+<img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/844bf5e8-fd75-4667-819d-4ab549f68825" />
+
