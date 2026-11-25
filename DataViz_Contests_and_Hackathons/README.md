@@ -79,7 +79,7 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 **Task:** Build a business analytics dashboard for oil and gas well data as part of a multi-stage competition. Finalists defended their work in a live broadcast.  
 
-**Result:** 🏅 Winner (finalist defense round; Drobova Darya is listed among the finalists)
+**Result:** 🏅 Winner (1st place)
 
 **Public link:** no
 
