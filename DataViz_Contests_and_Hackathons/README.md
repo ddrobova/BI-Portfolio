@@ -115,7 +115,9 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 **Conclusion:** The nine-sheet dashboard links CRM, market, price scenario, and treasury into a single picture. The working hypothesis of a shift to 181 days was confirmed by the stakeholders; the targeted campaign tool for this shift was not proven by A/B. The rate and promo decision lies with the market and treasury within the ceiling; the buffer and the −1 bn stress are on the liquidity sheet.
 
-**Result:** *(add result)*
+**Result:** 🏅 **Special category: "Best Understanding of Business."** 
+
+For detailed elaboration of business scenarios and the consequences of decisions.
 
 <img width="1725" height="971" alt="02_Л3_Анализ рынка и стоимость фондирования" src="https://github.com/user-attachments/assets/2aec66b6-e969-47c2-899e-9b3a658f6abc" />
 
