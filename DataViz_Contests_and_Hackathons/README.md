@@ -94,7 +94,7 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 <br>
 
-### [Visiology — Cortex Challenge (Retail Deposits Dashboard)]([https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/Visiology](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz_Contests_and_Hackathons/Visiology_win))
+### [Visiology — Cortex Challenge (Retail Deposits Dashboard)](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz_Contests_and_Hackathons/Visiology_win)
 
 **Contest:** Visiology / Cortex hackathon (September–November 2026).  
 
