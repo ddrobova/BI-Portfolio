@@ -9,7 +9,7 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 <br>
 
-### [AW BI — PharmaDash](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/AW%20BI%20(win))
+### [AW BI — PharmaDash](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz_Contests_and_Hackathons/AW_BI_win)
 
 **Contest:** PharmaDash contest-hackathon by AW BI and AstraZeneca (November 24 – December 16, 2025).  
 
@@ -31,7 +31,7 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 <br>
 
-### [DataLens — Yandex DataLens Festival](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/DataLens%20(top%205))
+### [DataLens — Yandex DataLens Festival](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz_Contests_and_Hackathons/DataLens_top5)
 
 **Contest:** Yandex DataLens Festival — an annual free online and offline event by Yandex Cloud for analysts, developers, product managers, and anyone working with data visualization and analysis.  
 
@@ -51,7 +51,7 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 <br>
 
-### [Fastboard — Cosmetics Company Analytics](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/Fastboard%20(win))
+### [Fastboard — Cosmetics Company Analytics](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz_Contests_and_Hackathons/Fastboard_win)
 
 **Contest:** Dashboard Contest for BI Analysts on the Fastboard BI platform — a Russian visual data analysis system.  
  
@@ -73,7 +73,7 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 <br>
 
-### [PIX BI — Intelligent Fund: Oil & Gas Well Analytics (Winner)](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/PIX%20BI%20(win))
+### [PIX BI — Intelligent Fund: Oil & Gas Well Analytics (Winner)](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz_Contests_and_Hackathons/PIX_BI_win)
 
 **Contest:** Dashboard contest "Intelligent Fund: Oil & Gas Well Analytics" by PIX Robotics and the "Educational League of Vendors" professional community.  
 
@@ -94,7 +94,7 @@ This folder brings together dashboards, analytical solutions, and experiments wi
 
 <br>
 
-### [Visiology — Cortex Challenge (Retail Deposits Dashboard)](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/Visiology)
+### [Visiology — Cortex Challenge (Retail Deposits Dashboard)]([https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz%20Contests%20%26%20Hackathons/Visiology](https://github.com/ddrobova/BI-Portfolio/tree/main/DataViz_Contests_and_Hackathons/Visiology_win))
 
 **Contest:** Visiology / Cortex hackathon (September–November 2026).  
 
